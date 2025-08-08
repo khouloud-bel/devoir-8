@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+header {
+    background: #2e7d32;
+    padding: 15px 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    font-family: 'Georgia', serif;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #dcedc8;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(to right, #66bb6a, #43a047);
+    color: white;
+    animation: fadeIn 2s ease-in;
+}
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+.hero p {
+    font-size: 1.2em;
+}
+.hero .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: white;
+    color: #2e7d32;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+.hero .btn:hover {
+    background: #c8e6c9;
+    transform: scale(1.05);
+}
+
+/* About & Collection */
+.about, .services {
+    padding: 50px 20px;
+    text-align: center;
+}
+.about p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2e7d32;
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
