@@ -82,11 +82,20 @@ nav ul li a:hover {
 }
 .services {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
+.cartes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
 .card {
+    flex: 1; /* toutes les cartes prennent la même largeur */
     background: #f1f8e9;
     padding: 20px;
     border-radius: 15px;
@@ -94,7 +103,9 @@ nav ul li a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .card img {
-    width: 100%;
+    width: 100%;      /* occupe toute la largeur de la carte */
+    height: 250px;    /* fixe la hauteur des images */
+    object-fit: cover; /* recadre l'image sans la déformer */
     border-radius: 12px;
     margin-bottom: 10px;
 }
